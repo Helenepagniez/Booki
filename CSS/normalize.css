@@ -1,0 +1,342 @@
+@media (max-width:992px)/*ordinateurs*/
+{
+    .sectioncentrale
+    {
+        flex-direction: column-reverse;/*inverser sens colonne*/
+    }
+
+    .section2
+    {
+        width: 100%;/*taille*/
+        margin-bottom: 20px;
+    }
+    
+    .section1
+    {
+        width: 100%;/*taille*/
+    }
+}
+
+@media (max-width:768px)/*tablettes*/
+{
+    .section2 .conteneur .carte h4
+    {
+        margin: 10px 0px -5px 0px;/*marge extérieur*/
+        width: 100%;/*largeur*/
+        font-size: 18px;/*taille du texte*/
+    }
+
+    .section1
+    {
+        margin-bottom: 10px;
+    }
+
+    .section3 .conteneur /*Section 3 sans titre*/
+    {
+        height: auto;/*hauteur*/
+        margin: 0 auto;
+        flex-direction: column;
+        width: 80%;
+    }   
+
+    .section3 .conteneur .carte
+    {
+        height: auto;/*hauteur*/
+    }
+
+    .section3 .conteneur .carte h4 /*titres dans carte*/
+    {
+        text-align: start;
+        padding: 20px;
+    }
+
+    .section3 .conteneur .carte .image-simple .img /*propriétés image simple de la 3ème section*/
+    {
+        height: 150px;
+    }
+
+    .section3 .conteneur .carte .image-double .img /*propriétés image double de la 3ème section*/
+    {
+        height: 150px;
+    }
+
+    .section3 .conteneur .carte .image-double-moyenne .img /*propriétés image double de la 3ème section*/
+    {
+        height: 150px;
+    }
+
+    .section3 .conteneur .carte .image-double-petite .img /*propriétés image double de la 3ème section*/
+    {
+        height: 150px;
+    }
+
+}
+
+@media (max-width:600px)/*téléphones*/
+{    
+    main
+    {
+        margin: 0;
+    }
+
+    main .titre,.sous-titre,.barre-de-recherche,.filtres, .information 
+    {
+        margin: 0 20px;
+    }
+
+    main .titre
+    {
+        margin-top: 20px;
+    }
+
+    header .conteneur 
+    {
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .conteneur nav 
+    {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    header .conteneur nav .liennav 
+    {
+        font-size: large;
+        width: 100%;
+        text-align: center;
+        border-bottom: solid 2px #f2f2f2;/*bordure haut bleu*/
+    } 
+
+    header nav .liennav.active /*liens de page activé dans header/nav*/
+    {
+        border-top: none;/* enlever bordure haute*/
+        border-bottom: solid 2px #0065FC;/*bordure bas bleu*/
+        color: #0065FC;/*texte en bleu*/
+    }
+
+    .liennav:hover /*Pointage souris*/
+    {
+        border-top: none;/* enlever bordure haute*/
+        border-bottom: solid 2px #0065FC;/*bordure bas bleu*/
+        color: #0065FC;/*texte en bleu*/
+    }
+
+    .titre 
+    {
+        font-size: 21px;/*taille du texte*/
+        width: 90%;
+        margin-bottom: 0;
+    }
+
+    .sous-titre
+    {
+        font-size: 16px;/*taille du texte*/
+        margin-bottom: 30px;
+        margin-top: 10px;
+    }
+
+    .barre-de-recherche
+    {
+        margin-bottom: 15px;
+    }
+
+    .barre-de-recherche .recherche
+    {
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .barre-de-recherche .recherche .recherchersmall
+    {
+        display: block;/*afficher loupe*/
+        font-size: small;
+    }
+
+    .barre-de-recherche .logo-position /*logo dans barre de recherche*/
+    {
+        background-color: #F2F2F2;/*couleur arrière-plan*/
+        width: 20px;/*largeur*/
+        height: 20px;/*hauteur*/
+    }
+     
+    .barre-de-recherche .recherche .rechercher
+    {
+        display: none;/*enlever bouton rechercher*/
+    }
+    
+    .barre-de-recherche .ville .villerecherche/*zone ville dans barre de recherche*/
+    {
+        border-width: 2px;/*largeur bordure*/
+        padding: 8px 25px;/*marge intérieur*/
+    }
+    
+    .filtres .filtres-généraux .filtre 
+    {
+        border-width: 2px;/*largeur bordure*/
+        border-color: #86858548;
+        height: 40px;/*hauteur de la div*/
+        margin: 5px;/*marge extérieur*/
+        padding-right: 30px;/*marge intérieur droite*/
+    }
+
+    .filtres .filtres-généraux .filtre .rond /*logos des filtres*/
+    {
+        height: 25px;/*hauteur de la div*/
+        width: 25px;/*largeur de la div*/
+        padding: 9px;/*marge intérieur*/
+        text-align: center;
+    }
+
+    .filtres .filtres-généraux .filtre .rond i 
+    {
+        padding-top: 5px;
+    }
+    
+    .filtres .filtres-généraux .filtre p /*texte dans div filtre*/
+    {
+        font-weight: 800;/*texte en gras*/
+    }
+
+    .information /*texte information*/
+    {
+        font-size: 16px;/*taille du texte*/
+    }
+
+    .information i /*logo information*/
+    {
+        margin-bottom: 50px;
+    }
+
+    .section2
+    {
+        background-color: #F2F2F2;/*couleur arrière-plan*/
+        height: auto;/*hauteur*/
+        width: 100%;
+        padding: 10px 20px 20px 20px;/*marge intérieur*/
+        border-radius: 0px;/*angles arrondies*/
+    }
+
+    .section2 .logo i /*logo courbe*/
+    {
+        font-size: 25px;/*taille*/
+    }
+    
+    .section2 .logo .titre
+    {
+        font-size: 22px;
+    }
+    
+    .section2 .conteneur .carte /*div encadrant image*/
+    {
+        margin: 10px 10px 10px 10px;/*marge extérieur*/
+    }
+    
+    .section2 .conteneur .carte .img /*propriétés image de la section 2*/
+    {
+        width: 120px;/*largeur*/
+    }
+    
+    .section2 .conteneur .carte h4
+    {
+        margin: 10px 0px -5px 0px;/*marge extérieur*/
+        width: 170px;/*largeur*/
+        font-size: 18px;/*taille du texte*/
+    }
+
+    .section1 /* div encadrant toute la section*/
+    {
+        background-color: white;/*couleur arrière-plan*/
+        width: 100%;/*largeur*/
+    }
+     
+    .section1 .titre /*titre de début de section*/
+    {
+        font-size: 22px;
+    }
+
+    .section1 .fin-section1 /*texte de fin de section*/
+    {
+        font-size: 16px;
+    }
+
+    .section1 .conteneur .carte /*div encadrant image*/
+    {
+        margin: 10px 10px;/*marge extérieur*/
+        border-radius: 10px;/*angles arrondies*/
+        padding: 5px 5px 0px 5px; /*marge intérieur*/
+        background-color: white;/*couleur arrière-plan*/
+        height: 220px; /*hauteur*/
+        width: 100%;
+        box-shadow: 3px 3px 3px 3px #F2F2F2;/*ombre de boite*/
+    }
+    
+    .section1 .conteneur .carte .img /*propriétés image double de la 1ère section*/
+    {
+        width: 100%;/*largeur*/
+        height: 120px;/*hauteur*/
+        background-position: center;/*arrière-plan centré*/
+        background-repeat: no-repeat;/*arrière-plan non répété*/
+        background-size: cover;/*arrière-plan coupé*/
+        border-radius: 10px 10px 0 0;/*angles arrondies*/
+        box-shadow: none;
+    }
+    
+    .section3 .titre
+    {
+        font-size:22px;
+        margin-bottom: 20px;
+    }
+
+    .section3 .conteneur /*Section 3 sans titre*/
+    {
+        height: auto;/*hauteur*/
+        margin: 0 20px;
+        flex-direction: column;
+    }   
+
+    .section3 .conteneur .carte
+    {
+        height: auto;/*hauteur*/
+    }
+
+    .section3 .conteneur .carte h4 /*titres dans carte*/
+    {
+        text-align: start;
+        padding: 20px;
+    }
+
+    .section3 .conteneur .carte .image-simple .img /*propriétés image simple de la 3ème section*/
+    {
+        height: 150px;
+    }
+
+    .section3 .conteneur .carte .image-double .img /*propriétés image double de la 3ème section*/
+    {
+        height: 150px;
+    }
+
+    .section3 .conteneur .carte .image-double-moyenne .img /*propriétés image double de la 3ème section*/
+    {
+        height: 150px;
+    }
+
+    .section3 .conteneur .carte .image-double-petite .img /*propriétés image double de la 3ème section*/
+    {
+        height: 150px;
+    }
+
+    footer /*pieds de page*/
+    {
+        font-size: 14px;/*taille police*/
+        height: auto;
+        flex-direction: column;
+    }        
+
+    footer p 
+    {
+        font-size: 12px;
+    }
+}

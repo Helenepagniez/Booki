@@ -1,0 +1,538 @@
+/*********************************************Généraux*******************************************************/
+@font-face 
+{
+    font-family: Raleway ;
+    src: url(Raleway/static/Raleway-Medium.ttf) format("truetype");
+}
+
+body 
+{
+    font-family: "Raleway", Arial, Helvetica, sans-serif;/*police du texte*/
+    margin: 0; /*marge extérieur*/
+}
+
+main /*body*/
+{
+    margin: 0 20px;/*marge extérieur gauche et droite*/
+}
+
+/*********************************************EN-TETE********************************************************/
+
+header .conteneur /*div conteneur du header*/
+{
+    display: flex;/* blocs côte à côte*/
+    position: relative;/*décaler de position initiale et évite superposition*/
+    justify-content: space-between;/*alignés axe principal + espace égale entre éléments*/
+    width: 100%;/*largeur de la div*/
+}
+
+header .conteneur .logo /*logo du header*/
+{
+    width: 100px;/*largeur*/
+    height: auto;/*hauteur*/
+    margin-left: 20px;/*marge extérieur gauche*/
+}
+
+header nav /*nav du header*/
+{
+    display: flex;/* blocs côte à côte*/
+    margin-right: 20px;/*marge extérieur droite*/
+}
+
+header nav .liennav /*liens de page désactivé dans header/nav*/
+{
+    padding: 20px;/*marge intérieur*/
+    text-decoration: none;/* enlever toute fioriture liens de page*/
+    justify-content: flex-end;/*alignés à la fin de l'axe principal*/
+    color: black;/*texte en noir*/
+    border-top: none;/*pas de bordure*/
+    cursor: pointer;/*pointeur pour imiter passage sur lien sans créer lien*/
+}
+
+header nav .liennav.active /*liens de page activé dans header/nav*/
+{
+    border-top: solid 2px #0065FC;/*bordure haut bleu*/
+    color: #0065FC;/*texte en bleu*/
+}
+
+.liennav:hover /*Pointage souris*/
+{
+    border-top: solid 2px #0065FC;/*bordure haut bleu*/
+    color: #0065FC;/*texte en bleu*/
+}
+
+/***********************************************AVANT SECTION***************************************************/
+
+.titre 
+{
+    font-size: 19px;/*taille du texte*/
+}
+
+.sous-titre
+{
+    font-size: 13px;/*taille du texte*/
+}
+
+.barre-de-recherche
+{
+    display: flex;/* blocs côte à côte*/
+    align-content: flex-start;/*éléments placés au début*/
+}
+
+.barre-de-recherche .logo-position /*logo dans barre de recherche*/
+{
+    background-color: #F2F2F2;/*couleur arrière-plan*/
+    width: 15px;/*largeur*/
+    height: 15px;/*hauteur*/
+    padding: 8px;/*marge intérieur*/
+    border-radius: 10px 0 0 10px;/*bordures gauche haut et bas arrondies*/
+    opacity: 0,95;/*transparence*/
+}
+
+.barre-de-recherche .ville .villerecherche/*zone ville dans barre de recherche*/
+{
+    font-weight: 600;/*texte en gras*/
+    border-width: 5px;/*largeur bordure*/
+    border-color: #F2F2F2;/*couleur bordure*/
+    border-style: solid;/*style bordure*/
+    padding: 3px;/*marge intérieur*/
+}
+
+.barre-de-recherche .recherche 
+{
+    background-color: #0065FC;/*couleur arrière-plan*/
+    color: white;/*couleur du texte*/
+    font-size: 13px;/*taille police*/
+    cursor: pointer;/*pointeur pour imiter passage sur lien sans créer lien*/
+    display: flex;/* blocs côte à côte*/
+    align-items: center;/*alignés au centre sur l'axe secondaire*/
+    justify-content: center;/*alignés au centre sur l'axe principal*/
+    padding: 8px;/*marge intérieur*/
+    border-radius: 0 10px 10px 0;/*angles arrondies*/
+}
+
+.barre-de-recherche .recherche .recherchersmall
+{
+    display: none;/*caché*/
+}
+
+.filtres
+{
+    display: flex;/* blocs côte à côte*/
+    flex-wrap: wrap;/*va à la ligne si manque de place*/
+}
+
+.filtres h4
+{
+    padding: 0px;/*marge intérieur*/
+    margin: 5px;/*marge extérieur*/
+    margin-top: 15px;/*marge extérieur haut*/
+}
+
+.filtres .filtres-généraux
+{
+    display: flex;/* blocs côte à côte*/
+    flex-wrap: wrap;/*va à la ligne si manque de place*/
+    font-size: 14px;/*taille du texte*/
+    align-items: center;/*alignés au centre sur l'axe secondaire*/
+}
+
+.filtres .filtres-généraux .filtre 
+{
+    display: flex;/* blocs côte à côte*/
+    border-width: 3px;/*largeur bordure*/
+    border-color: #F2F2F2;/*couleur bordure*/
+    border-style: solid;/*style bordure*/
+    border-radius: 20px 20px 20px 20px;/*angles arrondies*/
+    height: 30px;/*hauteur de la div*/
+    margin: 10px;/*marge extérieur*/
+    padding-right: 16px;/*marge intérieur droite*/
+    align-items: center;/*alignés au centre sur l'axe secondaire*/
+    background-color: white;/*couleur arrière-plan*/
+    cursor: pointer;/*pointeur pour imiter passage sur lien sans créer lien*/
+    border-left: none;/*enlever bordure gauche*/
+}
+
+.filtres .filtres-généraux .filtre .rond 
+{
+    border-radius: 20px 20px 20px 20px;/*angles arrondies*/
+    background-color: #DEEBFF;/*couleur arrière-plan*/
+    height: 20px;/*hauteur de la div*/
+    width: 20px;/*largeur de la div*/
+    padding: 8px;/*marge intérieur*/
+    display: flex;
+    justify-content: center;
+}
+
+.filtres .filtres-généraux .filtre i /*logos des filtres*/
+{
+    color: #0065FC;/*couleur du texte*/
+    padding-top: 2px;
+}
+
+.filtres .filtres-généraux .filtre p /*texte dans div filtre*/
+{
+    font-weight: 900;/*texte en gras*/
+    font-size: 12px;/*taille police*/
+    padding-left: 10px;/*marge intérieur gauche*/
+}
+
+.filtres .filtres-généraux .filtre:hover /*survol filtre*/
+{
+    box-shadow: 0 0 15px #000000;/*ombre de boite*/
+    background-color: #0065FC;/*couleur arrière-plan*/
+    color: white;/*couleur du texte*/
+}
+
+.filtres .filtres-généraux .filtre:hover i /*survol filtre + logo filtre*/
+{
+    color: black;/*couleur du texte*/
+}
+    
+.information /*texte information*/
+{
+    display: flex;/* blocs côte à côte*/
+    font-size: 11px;/*taille du texte*/
+}
+
+.information i /*logo information*/
+{
+    color: white;/*couleur du texte*/
+    box-shadow: #858585 0 0 2px;/*ombre de boite*/
+    border-radius: 50px;/*angles arrondies*/
+    height: 100%;/*hauteur de la div*/
+    background-color: #0065FC;/*couleur arrière-plan*/
+    margin-top: 13.5px;/*marge extérieur en haut*/
+    margin-right: 10px;/*marge extérieur à droite*/
+}
+
+/*************************************Section centrale*****************************************/
+
+.sectioncentrale
+{
+    display: flex;/* blocs côte à côte*/
+    justify-content: space-between;
+}
+
+/*************************************Section 1 : Hébergements à Marseille*****************************************/
+
+.section1 /* div encadrant toute la section*/
+{
+    background-color: #F2F2F2;/*couleur arrière-plan*/
+    width: 57%;/*largeur*/
+    padding: 10px 20px 20px 20px;/*marge intérieur*/
+    border-radius: 15px;/*angles arrondies*/
+}
+
+.section1 .titre /*titre de début de section*/
+{
+    margin-left: 10px;/*marge extérieur à gauche*/
+}
+
+.section1 .fin-section1 /*texte de fin de section*/
+{
+    font-weight: bold;/*texte en gras*/
+    margin-left: 10px;/*marge extérieur à gauche*/
+    cursor: pointer;/*pointeur pour imiter passage sur lien sans créer lien*/
+}
+
+.section1 .conteneur /*Section 1*/
+{
+    display: flex;/* blocs côte à côte*/
+    flex-wrap: wrap;
+    width: 100%;/*largeur*/
+    height: auto;/*hauteur*/
+    margin-bottom: 20px;/*marge extérieur en bas*/
+}   
+
+.section1 .conteneur .carte /*div encadrant image*/
+{
+    margin: 10px auto;/*marge extérieur*/
+    border-radius: 10px;/*angles arrondies*/
+    padding: 5px 5px 0px 5px; /*marge intérieur*/
+    background-color: white;/*couleur arrière-plan*/
+    height: 220px; /*hauteur*/
+}
+
+.section1 .conteneur .carte .img /*propriétés image double de la 1ère section*/
+{
+    width: 200px;/*largeur*/
+    height: 120px;/*hauteur*/
+    background-position: center;/*arrière-plan centré*/
+    background-repeat: no-repeat;/*arrière-plan non répété*/
+    background-size: cover;/*arrière-plan coupé*/
+    border-radius: 10px 10px 0 0;/*angles arrondies*/
+    box-shadow: 2px 2px 2px 2px #F2F2F2;/*ombre de boite*/
+}
+
+.section1 .conteneur .carte a
+{
+    text-decoration: none;/* enlever toute fioriture texte*/
+    color: black;/*couleur du texte*/
+}
+
+.section1 .conteneur .carte a em /*Prix*/
+{
+    font-weight: 600;/*texte en gras*/
+}
+
+.section1 .conteneur .carte a i /*étoile pleine*/
+{
+    color: #0065FC;/*couleur étoile pleine*/
+    margin-left: 10px;/*marge intérieur gauche*/
+    width: 5px;/*taille*/
+    box-sizing: border-box;/*box pour adapter taille*/
+}
+
+.section1 .conteneur .carte a .grise /*étoile vide*/
+{
+    color: #cacaca;/*couleur étoile vide*/
+}
+
+.section1 .conteneur .carte h4
+{
+    text-align: left;/*alignés le texte à gauche*/
+    padding-left: 10px;/*marge intérieur gauche*/
+    color: black;/*couleur du texte*/
+    margin: 10px 0px -5px 0px;/*marge extérieur*/
+}
+
+.section1 .conteneur .carte p
+{
+    text-align: left;/*alignés le texte à gauche*/
+    padding-left: 10px;/*marge intérieur gauche*/
+    color: black;/*couleur du texte*/
+}
+
+/*************************************Section 2 : Les plus populaires**********************************************/
+
+.section2
+{
+    background-color: #F2F2F2;/*couleur arrière-plan*/
+    width: 32%;/*largeur*/
+    height: auto;/*hauteur*/
+    padding: 10px 20px 20px 20px;/*marge intérieur*/
+    border-radius: 15px;/*angles arrondies*/
+}
+
+.section2 .logo /*logo +titre*/
+{
+    display: flex;/* blocs côte à côte*/
+    align-items: flex-end; /*alignés à la fin sur l'axe secondaire*/
+    justify-content: space-between;
+    margin-left: 10px;/*marge extérieur gauche*/
+    padding-bottom: 10px;/*marge intérieur bas*/
+}
+
+.section2 .logo i /*logo courbe*/
+{
+    font-size: 20px;/*taille*/
+}
+
+.section2 .logo .titre
+{
+    margin-left: 20px;/*marge extérieur à gauche*/
+    font-weight: bold;/*mettre en gras*/
+    margin: 18px 0px 0px 0px;/*marge extérieur*/
+    padding: 0px;/*marge intérieur*/
+}
+
+.section2 .conteneur /*Section 2*/
+{
+    width: 100%;/*largeur*/
+    height: auto;/*hauteur*/
+    margin-bottom: 20px;/*marge extérieur en bas*/
+}   
+
+.section2 .conteneur .carte /*div encadrant image*/
+{
+    border-radius: 25px;/*angles arrondies*/
+    padding: 5px 0px 5px 5px;/*marge intérieur*/
+    background-color: white;/*couleur arrière-plan*/
+    height: 155px;/*hauteur*/
+    margin: 10px 10px 30px 10px;/*marge extérieur*/
+}
+
+.section2 .conteneur .carte .img /*propriétés image de la section 2*/
+{
+    width: 170px;/*largeur*/
+    height: 155px;/*hauteur*/
+    background-position: center;/*arrière-plan centré*/
+    background-repeat: no-repeat;/*arrière-plan non répété*/
+    background-size: cover;/*arrière-plan coupé*/
+    border-radius: 25px 0 0 25px;/*angles arrondies*/
+}
+
+.section2 .conteneur .carte a
+{
+    text-decoration: none;/* enlever toute fioriture texte*/
+    color: black;/*couleur du texte*/
+    display: flex;/* blocs côte à côte*/
+}
+
+.section2 .conteneur .carte a em /*Prix*/
+{
+    font-weight: 600;/*texte en gras*/
+}
+
+.section2 .conteneur .carte a i /*étoile pleine*/
+{
+    color: #0065FC;/*couleur étoile pleine*/
+    margin-left: 10px;/*marge extérieur gauche*/
+    width: 5px;/*taille*/
+    box-sizing: border-box;/*box pour adapter taille*/
+}
+
+.section2 .conteneur .carte a .grise /*étoile vide*/
+{
+    color: #cacaca;/*couleur étoile vide*/
+}
+
+.section2 .conteneur .carte h4
+{
+    text-align: left;/*alignés le texte à gauche*/
+    padding-left: 20px;/*marge intérieur gauche*/
+    flex-wrap: wrap ;/*éléments vont à la ligne lorsqu'il n'y a plus de place*/
+    color: black;/*couleur du texte*/
+    margin: 10px 0px -5px 0px;/*marge extérieur*/
+    width: 170px;/*largeur*/
+    font-size: 18px;/*taille du texte*/
+}
+
+.section2 .conteneur .carte p
+{
+    text-align: left;/*alignés le texte à gauche*/
+    padding-left: 20px;/*marge intérieur gauche*/
+    color: black;/*couleur du texte*/
+    margin-bottom: 8px;/*marge extérieur en bas*/
+}
+
+.section2 .conteneur .carte a .etoiles
+{
+    display: flex;/* blocs côte à côte*/
+    margin-left: 13.5px;/*marge extérieur gauche*/
+}
+
+.section2 .conteneur .carte a .etoiles i
+{
+    margin: 6.5px;/*marge extérieur*/
+    padding-top: 30px;/*marge intérieur haut*/
+}
+
+/*************************************Section 3 : Activités à Marseille********************************************/
+
+.section3 .conteneur /*Section 3 sans titre*/
+{
+    display: flex;/* blocs côte à côte*/
+    width: 100%;/*largeur*/
+    height: 450px;/*hauteur*/
+    margin-bottom: 30px;/*marge extérieur en bas*/
+}   
+
+.section3 .titre
+{
+    font-weight: bold;/*mettre en gras*/
+}
+
+.section3 .conteneur .carte
+{
+    width: 100%;/*largeur*/
+    height: 300px;/*hauteur*/
+    margin: 0 20px 0 0;/*marge extérieur*/
+    border-radius: 10px;/*angles arrondies*/
+}
+
+.section3 .conteneur .carte h4 /*titres dans carte*/
+{
+    height: 35px;/*hauteur*/
+    box-shadow: 2px 2px 2px 2px #F2F2F2;/*ombre de boite*/
+    margin: 0px;/*marge extérieur*/
+    margin-bottom: 27px;/*marge extérieur en bas*/
+    width: auto;/*largeur*/
+    border-radius: 0 0 10px 10px;/*angles arrondies*/
+    background-color: white;/*couleur arrière-plan*/
+    text-align: left;/*alignés le texte à gauche*/
+    padding-left: 20px;/*marge intérieur gauche*/
+    padding-top: 10px;/*marge intérieur haut*/
+    color: black;/*couleur du texte*/
+    flex-wrap: wrap;
+}
+
+.section3 .conteneur .carte a 
+{
+    text-decoration: none;/* enlever toute fioriture liens de page*/
+    font-size: 15px;/*taille du texte*/
+}
+
+.section3 .conteneur .carte .image-simple .img /*propriétés image simple de la 3ème section*/
+{
+    width: 100%;/*largeur*/
+    height: 370px;/*hauteur*/
+    background-position: center;/*arrière-plan centré*/
+    background-repeat: no-repeat;/*arrière-plan non répété*/
+    background-size: cover;/*arrière-plan coupé*/
+    border-radius: 10px 10px 0 0;/*angles arrondies*/
+    box-shadow: 2px 2px 2px 2px #F2F2F2;/*ombre de boite*/
+    filter: saturate(150%);/*saturation*/
+}
+
+.section3 .conteneur .carte .image-double .img /*propriétés image double de la 3ème section*/
+{
+    width: 100%;/*largeur*/
+    height: calc(370px/2 - 36px);/*hauteur 1 image divisé par 2 avec marge de h4*/
+    background-position: center;/*arrière-plan centré*/
+    background-repeat: no-repeat;/*arrière-plan non répété*/
+    background-size: cover;/*arrière-plan coupé*/
+    border-radius: 10px 10px 0 0;/*angles arrondies*/
+    box-shadow: 2px 2px 2px 2px #F2F2F2;/*ombre de boite*/
+    filter: saturate(100%);/*saturation*/
+}
+
+.section3 .conteneur .carte .image-double-moyenne .img /*propriétés image double de la 3ème section*/
+{
+    width: 100%;/*largeur*/
+    height: 190px;/*hauteur 1 image divisé par 2 avec marge de h4*/
+    background-position: center;/*arrière-plan centré*/
+    background-repeat: no-repeat;/*arrière-plan non répété*/
+    background-size: cover;/*arrière-plan coupé*/
+    border-radius: 10px 10px 0 0;/*angles arrondies*/
+    box-shadow: 2px 2px 2px 2px #F2F2F2;/*ombre de boite*/
+}
+
+.section3 .conteneur .carte .image-double-petite .img /*propriétés image double de la 3ème section*/
+{
+    width: 100%;/*largeur*/
+    height: calc(370px - 200px - 31px*2);/*hauteur 1 image divisé par 2 avec marge de h4*/
+    background-position: center;/*arrière-plan centré*/
+    background-repeat: no-repeat;/*arrière-plan non répété*/
+    background-size: cover;/*arrière-plan coupé*/
+    border-radius: 10px 10px 0 0;/*angles arrondies*/
+    box-shadow: 2px 2px 2px 2px #F2F2F2;/*ombre de boite*/
+}
+
+/*************************************PIEDS DE PAGE****************************************************************/
+
+footer /*pieds de page*/
+{
+    font-size: 12px;/*taille police*/
+    display: flex;/* blocs côte à côte*/
+    justify-content: center;
+    position: relative;/*décaler de position initiale et évite superposition*/
+    width: 100%;/*largeur*/
+    height: auto;
+    background-color: #F2F2F2;/*couleur arrière-plan*/
+    padding: 15px 0px;/*marge intérieur*/
+    margin-top: 20px;/*marge extérieur haut*/
+}    
+
+footer .titre-partie /*titre colonnes du footer*/
+{
+   padding: 5px 100px 5px 20px;/*marge intérieur*/
+}
+
+footer p /*paragraphe du footer*/
+{
+    cursor: pointer;/*pointeur pour imiter passage sur lien sans créer lien*/
+    font-size: 11px;/*taille du texte*/
+    font-weight: 500;/*texte en gras*/
+}

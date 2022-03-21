@@ -1,0 +1,15 @@
+{
+    "name": "p2_helene_pagniez",
+    "version": "1.0.0",
+    "description": "Projet 2 Booki ",
+    "main": "index.html",
+    
+    "repository":
+     {
+      "type": "git",
+      "url": "https://github.com/Helenepagniez/Booki.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "homepage": ""
+  }
