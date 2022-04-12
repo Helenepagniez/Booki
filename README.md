@@ -1,8 +1,6 @@
 # Booki
 Deuxième projet du parcours "Développeur web" d'OpenClassroom. 
 L'objectif est de transformer une maquette en site web avec HTML & CSS 
-Lien de la  maquette:
-https://www.figma.com/file/0sedjtePDieUzjL3D0s1uf/d%C3%A9coupage-maquette-BOOKI?node-id=0%3A1
 
 # Technologies utilisées 
 HTML & CSS
