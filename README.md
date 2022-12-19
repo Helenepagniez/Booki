@@ -28,3 +28,7 @@ HTML & CSS
 - Il est important d’utiliser des balises sémantiques (type body, header, nav, etc.).
 - Le code doit être valide aux validateurs W3C HTML et CSS. 
 - La maquette doit être compatible avec les dernières versions de Google Chrome et de Mozilla Firefox. Il faudra tester le prototype sur ces deux navigateurs.
+
+
+# Lancer l'application
+Afin de lancer l'application, il suffit de cliquer sur le lien.
